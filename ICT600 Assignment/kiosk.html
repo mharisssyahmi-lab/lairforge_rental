@@ -1,0 +1,344 @@
+<!--Muhammad Haris Syahmi Bin Mohd Rafizal-->
+<!--2024231026, CDCS2405B-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAIRFORGE | Quotation Kiosk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="site-header">
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                LAIR<span>FORGE</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Founder</a></li>
+                    <li><a href="kiosk.html" class="active">Kiosk</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- form input -->
+        <section class="section">
+            <div class="container kiosk-layout">
+
+                <div class="form-container">
+
+                    <div class="form-heading">
+                        <p class="eyebrow">RENTAL CONFIGURATION</p>
+                        <h2>CREATE YOUR QUOTATION</h2>
+                        <p>Complete the form below to calculate your rental cost.</p>
+                    </div>
+
+                    <form id="quotationForm" novalidate>
+
+                        <!-- cust details -->
+                        <div class="form-section">
+
+                            <h3>01. Customer Information</h3>
+
+                            <div class="form-group">
+                                <label for="customerName">
+                                    Customer Name 
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customerName"
+                                    placeholder="Enter your name"
+                                    required
+                                    minlength="2"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customerEmail">
+                                    Email Address 
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="customerEmail"
+                                    placeholder="example@email.com"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                        <!-- base service -->
+                        <div class="form-section">
+
+                            <h3>02. Choose Your Headquarters</h3>
+
+                            <div class="form-group">
+
+                                <label for="baseService">
+                                    Select Base Service 
+                                </label>
+
+                                <select id="baseService" required>
+
+                                    <option value="">
+                                        -- Select Your Lair --
+                                    </option>
+
+                                    <option value="underground">
+                                        Underground Bunker - RM500/day
+                                    </option>
+
+                                    <option value="volcano">
+                                        Volcano Fortress - RM1,200/day
+                                    </option>
+
+                                    <option value="sky">
+                                        Sky Tower Penthouse - RM900/day
+                                    </option>
+
+                                    <option value="island">
+                                        Private Island Compound - RM1,500/day
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <!-- optional add on service -->
+                        <div class="form-section">
+
+                            <h3>03. Additional Facilities</h3>
+
+                            <p class="form-note">
+                                Select any additional facilities
+                                you would like to include.
+                            </p>
+
+                            <div class="addon-list">
+
+                                <label class="addon-option">
+                                    <input
+                                        type="checkbox"
+                                        name="addons"
+                                        value="laser"
+                                    >
+
+                                    <span>
+                                        <strong>Laser Security Grid</strong>
+                                        <small>RM180 / day</small>
+                                    </span>
+                                </label>
+
+                                <label class="addon-option">
+                                    <input
+                                        type="checkbox"
+                                        name="addons"
+                                        value="laboratory"
+                                    >
+
+                                    <span>
+                                        <strong>Mad Science Laboratory</strong>
+                                        <small>RM250 / day</small>
+                                    </span>
+                                </label>
+
+                                <label class="addon-option">
+                                    <input
+                                        type="checkbox"
+                                        name="addons"
+                                        value="ai"
+                                    >
+
+                                    <span>
+                                        <strong>AI Command System</strong>
+                                        <small>RM120 / day</small>
+                                    </span>
+                                </label>
+
+                                <label class="addon-option">
+                                    <input
+                                        type="checkbox"
+                                        name="addons"
+                                        value="helipad"
+                                    >
+
+                                    <span>
+                                        <strong>Private Helipad</strong>
+                                        <small>RM300 / day</small>
+                                    </span>
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                        <!-- quantity -->
+                        <div class="form-section">
+
+                            <h3>04. Rental Duration & Quantity</h3>
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+                                    <label for="rentalDays">
+                                        Rental Duration (Days) 
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="rentalDays"
+                                        min="1"
+                                        max="365"
+                                        value="1"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- button -->
+                        <div class="form-buttons">
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                            >
+                                CALCULATE
+                            </button>
+
+                            <button
+                                type="reset"
+                                class="btn btn-secondary"
+                                id="resetButton"
+                            >
+                                RESET
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- price info -->
+                <aside class="price-guide">
+
+                    <p class="eyebrow">TRANSPARENT PRICING</p>
+
+                    <h3>PRICE GUIDE</h3>
+
+                    <div class="price-item">
+                        <span>Underground Bunker</span>
+                        <strong>RM 500/day</strong>
+                    </div>
+
+                    <div class="price-item">
+                        <span>Volcano Fortress</span>
+                        <strong>RM 1,200/day</strong>
+                    </div>
+
+                    <div class="price-item">
+                        <span>Sky Tower Penthouse</span>
+                        <strong>RM 900/day</strong>
+                    </div>
+
+                    <div class="price-item">
+                        <span>Private Island</span>
+                        <strong>RM 1,500/day</strong>
+                    </div>
+
+                    <hr>
+
+                    <h4>OPTIONAL UPGRADES</h4>
+
+                    <p>Laser Security: RM 180/day</p>
+                    <p>Science Laboratory: RM 250/day</p>
+                    <p>AI Command: RM 120/day</p>
+                    <p>Private Helipad: RM 300/day</p>
+
+                    <div class="guide-note">
+                        <strong>HOW IT WORKS</strong>
+
+                        <p>
+                            Total Price = (Base Price + Add-ons)
+                            × Rental Days.
+                        </p>
+
+                        <p>
+                            All prices are fictional and shown
+                            in Malaysian Ringgit (RM).
+                        </p>
+                    </div>
+
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- result -->
+        <section class="section result-section" id="resultSection" hidden>
+
+            <div class="container">
+
+                <div class="result-container">
+
+                    <p class="eyebrow">QUOTATION GENERATED</p>
+
+                    <h2>YOUR RENTAL SUMMARY</h2>
+
+                    <p class="result-success">
+                        Your quotation has been calculated successfully.
+                    </p>
+
+                    <div id="resultDetails"></div>
+
+                    <div class="total-box">
+
+                        <p>ESTIMATED TOTAL PRICE</p>
+
+                        <h2 id="grandTotal">RM0.00</h2>
+
+                    </div>
+
+                    <p class="form-note">
+                        This is an estimated quotation based on
+                        the selected services and rental duration.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="site-footer">
+
+        <div class="container">
+            <p>© 2026 LAIRFORGE. ALL RIGHTS RESERVED.</p>
+            <p>YOUR SECRET HEADQUARTERS STARTS HERE.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
