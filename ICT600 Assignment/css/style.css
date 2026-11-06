@@ -1,7 +1,5 @@
-
-/* =====================================
-   LAIRFORGE - MAIN STYLESHEET
-===================================== */
+/* MUHAMMAD HARIS SYAHMI BIN MOHD RAFIZAL
+2024231026 RCDCS2405B*/
 
 :root {
     --background: #090d0b;
@@ -46,9 +44,7 @@ section {
     scroll-margin-top: 80px;
 }
 
-/* =====================================
-   HEADER & NAVIGATION
-===================================== */
+/*header*/
 
 .site-header {
     background: #0c120e;
@@ -94,9 +90,7 @@ section {
     color: var(--primary);
 }
 
-/* =====================================
-   BUTTONS
-===================================== */
+/*button*/
 
 .btn {
     display: inline-block;
@@ -132,9 +126,7 @@ section {
     color: var(--primary);
 }
 
-/* =====================================
-   GENERAL SECTION
-===================================== */
+/*section*/
 
 .section {
     padding: 85px 0;
@@ -167,9 +159,7 @@ section {
     margin-bottom: 18px;
 }
 
-/* =====================================
-   FOUNDER PAGE HERO
-===================================== */
+/*founder*/
 
 .hero {
     padding: 105px 0;
@@ -257,9 +247,7 @@ section {
     letter-spacing: 2px;
 }
 
-/* =====================================
-   SERVICES
-===================================== */
+/*services*/
 
 .services-section {
     background: #0d130f;
@@ -299,9 +287,7 @@ section {
     font-size: 14px;
 }
 
-/* =====================================
-   FOUNDER PROFILE
-===================================== */
+/*founder*/
 
 .founder-card {
     display: grid;
@@ -364,9 +350,7 @@ section {
     overflow-wrap: anywhere;
 }
 
-/* =====================================
-   CALL TO ACTION
-===================================== */
+/*cta section*/
 
 .cta-section {
     text-align: center;
@@ -385,9 +369,7 @@ section {
     margin-bottom: 25px;
 }
 
-/* =====================================
-   KIOSK PAGE
-===================================== */
+/*kiosk*/
 
 .kiosk-hero {
     padding: 75px 0;
@@ -433,9 +415,7 @@ section {
     font-size: 14px;
 }
 
-/* =====================================
-   FORM
-===================================== */
+/*form*/
 
 .form-section {
     padding: 25px 0;
@@ -480,7 +460,13 @@ section {
 .form-group input::placeholder {
     color: #69776b;
 }
-
+.error-message {
+    display: block;
+    color: #ff4a4a;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 6px;
+}
 .form-row {
     display: flex;
     gap: 20px;
@@ -492,9 +478,7 @@ section {
     margin-top: 8px;
 }
 
-/* =====================================
-   ADD-ON CHECKBOXES
-===================================== */
+/*checkboxes*/
 
 .addon-list {
     display: grid;
@@ -541,9 +525,7 @@ section {
     font-size: 11px;
 }
 
-/* =====================================
-   FORM BUTTONS
-===================================== */
+/*buttons*/
 
 .form-buttons {
     display: flex;
@@ -556,9 +538,7 @@ section {
     flex: 1;
 }
 
-/* =====================================
-   PRICE GUIDE
-===================================== */
+/*price info*/
 
 .price-guide {
     position: sticky;
@@ -621,9 +601,7 @@ section {
     margin-top: 10px;
 }
 
-/* =====================================
-   QUOTATION RESULT
-===================================== */
+/*result*/
 
 .result-section {
     padding-top: 0;
@@ -688,9 +666,7 @@ section {
     margin-top: 10px;
 }
 
-/* =====================================
-   FOOTER
-===================================== */
+/*footer*/
 
 .site-footer {
     background: #070a08;
@@ -706,9 +682,7 @@ section {
     margin: 5px 0;
 }
 
-/* =====================================
-   RESPONSIVE DESIGN
-===================================== */
+/*responsee*/
 
 @media (max-width: 850px) {
 
@@ -788,9 +762,7 @@ section {
     }
 }
 
-/* =====================================
-   PRINT QUOTATION
-===================================== */
+/*print output*/
 
 @media print {
 
