@@ -127,7 +127,10 @@ quotationForm.addEventListener("submit", function(event) {
     // Prevent page refresh
 
     event.preventDefault();
-
+    document.getElementById("customerNameError").textContent = "";
+    document.getElementById("customerEmailError").textContent = "";
+    document.getElementById("baseServiceError").textContent = "";
+    document.getElementById("rentalDaysError").textContent = "";
 
     // retrieve cut details
 
@@ -162,15 +165,15 @@ quotationForm.addEventListener("submit", function(event) {
     // validate cust name
 
     if (customerName.length < 2) {
-
-        alert("Please enter a valid customer name.");
-
+    
+        document.getElementById("customerNameError").textContent =
+            "Customer name is required.";
+    
         document.getElementById("customerName").focus();
-
+    
         return;
-
+    
     }
-
 
     // validate email 
 
@@ -178,28 +181,28 @@ quotationForm.addEventListener("submit", function(event) {
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailPattern.test(customerEmail)) {
-
-        alert("Invalid email address. Please try again.");
-
+    
+        document.getElementById("customerEmailError").textContent =
+            "Customer email is required.";
+    
         document.getElementById("customerEmail").focus();
-
+    
         return;
-
+    
     }
-
 
     // validate base service
 
     if (!basePrices[baseKey]) {
-
-        alert("Please select a headquarters.");
-
+    
+        document.getElementById("baseServiceError").textContent =
+            "Please select a headquarters.";
+    
         document.getElementById("baseService").focus();
-
+    
         return;
-
+    
     }
-
 
     // validate quantity
 
@@ -208,15 +211,16 @@ quotationForm.addEventListener("submit", function(event) {
         rentalDays < 1 ||
         rentalDays > 365
     ) {
-
-        alert("Rental duration must be between 1 and 365 days.");
-
+    
+        document.getElementById("rentalDaysError").textContent =
+            "Rental duration must be between 1 and 365 days.";
+    
         document.getElementById("rentalDays").focus();
-
+    
         return;
-
+    
     }
-
+    
     // 7. get base price
 
     const selectedBase = basePrices[baseKey];
