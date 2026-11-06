@@ -307,12 +307,6 @@ quotationForm.addEventListener("submit", function(event) {
         rentalDays + " day(s)"
     );
 
-    addResultRow(
-        "Number of Henchmen",
-        henchmen + " person(s)"
-    );
-
-
     // 13. print total price
 
     grandTotal.textContent = formatRM(grandTotalAmount);
